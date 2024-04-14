@@ -1,0 +1,180 @@
+@import url("//fonts.googleapis.com/css?family=Google+Sans:400,500,600,700");
+@import url("//fonts.googleapis.com/css?family=Roboto+Mono:400,500");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+body {
+  font-family: "Google Sans", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  background-color: #e6e6f1;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  justify-content: space-between;
+  padding: 10px 15px;
+
+
+
+}
+
+/* #header img {
+      width: 30px;
+    } */
+
+main {
+  width: 92%;
+  margin: 20px auto;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding-bottom: 30px;
+
+}
+
+main main {
+  background-color: red;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #c5c5c5;
+  border-radius: 5px 5px 0 0;
+  background-color: #f8f6f6;
+  font-family: "Google Sans", Helvetica, Arial, sans-serif !important;
+  font-size: 17px;
+}
+
+input:valid,
+input:focus {
+  border-bottom: 1.5px solid blue;
+}
+
+main form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+main .form_input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main button {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  background-color: #4545fe;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+main button:hover {
+  background-color: #3232f9;
+}
+
+main section {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+#output {
+  color: #3232f9;
+  font-weight: bold;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 0.3s ease-in-out;
+}
+
+#output h3 {
+  color: black;
+}
+
+#output p {
+  font-size: 16px;
+}
+
+#output.expand {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.chart {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+
+
+}
+
+.chart .select {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chart .select select {
+  padding: 4px 10px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background-color: #f8f6f6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.chart.show {
+  display: flex;
+}
+
+@media (width <=480px) {
+  main {
+    padding: 15px;
+    padding-bottom: 20px;
+  }
+
+  main form {
+    grid-template-columns: auto;
+  }
+}

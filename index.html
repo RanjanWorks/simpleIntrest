@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Intrest</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <main id="header">
+    <div class="wrap">
+      <!-- <img src="https://img.icons8.com/?size=512&id=100879&format=png" alt="" /> -->
+      <p>Simple Intrest</p>
+    </div>
+    <div class="wrap">
+      <div id="root"></div>
+    </div>
+  </main>
+  <main>
+    <form>
+      <div class="form_input">
+        <label for="principle">Principle</label>
+        <input autocomplete="off" id="principle" type="number" required placeholder="Amount" />
+      </div>
+      <div class="form_input">
+        <label for="rate">Rate</label>
+        <input autocomplete="off" id="rate" type="number" required placeholder="%" />
+      </div>
+      <div class="form_input">
+        <label for="startDate">Start Date</label>
+        <input id="startDate" type="date" required />
+      </div>
+      <div class="form_input">
+        <label for="endDate">End Date</label>
+        <input id="endDate" type="date" required are />
+      </div>
+
+      <button id="hidden" hidden type="submit">HI</button>
+    </form>
+  </main>
+  <main>
+    <button onclick="startMe()">Calculate</button>
+  </main>
+  <main id="output">
+    <section>
+      <h3>Time</h3>
+      <p><span data-month></span> Month <span data-day></span> days</p>
+
+      <h3>Intrest</h3>
+      <p data-intrest></p>
+
+      <h3>Total</h3>
+      <p data-total></p>
+
+      <h3>Accurate <span data-accuday></span></h3>
+      <p data-accu></p>
+    </section>
+  </main>
+  <main class="chart">
+    <div class="select">
+      <label for="ff">Select Chart Type</label>
+      <select onchange="updateChart(this)" id="chartTypeSelect">
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+        <option value="bubble">Bubble</option>
+        <option value="pie">Pie</option>
+        <option value="doughnut">Doughnut</option>
+      </select>
+    </div>
+    <canvas id="chart"></canvas>
+  </main>
+  <script src="https://cdn.ranjankashyap1.repl.co/profile.js"></script>
+  <script>
+
+    new profile("#root");
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
